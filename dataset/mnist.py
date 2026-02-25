@@ -115,17 +115,17 @@ def load_mnist(normalize=True, flatten=True, one_hot_label=False):
         one-hot数组是指例如 [0,0,1,0,0,0,0,0,0,0] 这样的数组。
         当 one_hot_label 为 False 时，只是像 7、2 这样简单保存正确解标签；
         当 one_hot_label 为 True 时，标签则保存为 one-hot 表示。
-    flatten : bool, 可选。是否将图像展平为一维数组。默认为 True。。
-                如果将该参数设置为 False，则输入图像为 1 × 28 × 28 的三维数组；
-                若设置为 True，则输入图像会保存为由 784 个元素构成的一维数组。
+    flatten : bool, 可选。是否将图像展平为一维数组。默认为 True。
+                如果将该参数设置为 False, 则输入图像为 1 x 28 x 28 的三维数组；
+                若设置为 True, 则输入图像会保存为由 784 个元素构成的一维数组。
 
     返回
     -------
     tuple
-        以(训练图像, 训练标签), (测试图像, 测试标签) 的形式返回数据。
+        以 (训练图像, 训练标签), (测试图像, 测试标签) 的形式返回数据。
         每个元素都是numpy数组。
     """
-    # 如果MNIST数据集文件不存在，则进行初始化处理
+    # 如果 MNIST 数据集文件不存在，则进行初始化处理
     if not os.path.exists(save_file):
         init_mnist()
 
@@ -133,7 +133,7 @@ def load_mnist(normalize=True, flatten=True, one_hot_label=False):
     with open(save_file, "rb") as f:
         dataset = pickle.load(f)
 
-    # 如果normalize为True，则将图像数据的像素值归一化到 0.0~1.0
+    # 如果 normalize 为 True，则将图像数据的像素值归一化到 0.0~1.0
     if normalize:
         for key in ("train_img", "test_img"):
             dataset[key] = dataset[key].astype(np.float32)

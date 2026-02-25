@@ -8,8 +8,8 @@ y1 = np.sin(x)
 y2 = np.cos(x)
 
 # 绘制图形
-plt.plot(x, y1, label="sin")
-plt.plot(x, y2, linestyle="--", label="cos")  # 用虚线绘制
+plt.plot(x, y1, label="sin")  # 设置了 label 后，必须调用 plt.legend() 才会显示图例
+plt.plot(x, y2, linestyle="--", label="cos", color="r")  # 用虚线绘制
 plt.xlabel("x")  # x轴的标签
 plt.ylabel("y")  # y轴的标签
 plt.title("sin & cos")  # 标题
