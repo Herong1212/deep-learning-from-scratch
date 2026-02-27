@@ -11,6 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             // "cwd": "/root/private/fishbook/deep-learning-from-scratch"
+            "justMyCode": false
         }
     ]
 }

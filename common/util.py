@@ -3,31 +3,60 @@ import numpy as np
 
 
 def smooth_curve(x):
-    """損失関数のグラフを滑らかにするために用いる
-
-    参考：http://glowingpython.blogspot.jp/2012/02/convolution-with-numpy.html
     """
+    对输入数据进行平滑处理，通常用于平滑损失函数的曲线图。
+
+    参数:
+        x (array-like): 需要平滑处理的一维数组或列表。
+
+    返回:
+        array: 平滑处理后的数组，长度比输入数组略短。
+
+    参考: http://glowingpython.blogspot.jp/2012/02/convolution-with-numpy.html
+    """
+    # 设置窗口长度，用于定义平滑的范围
     window_len = 11
+    
+    # 扩展输入数组，以处理边界效应
     s = np.r_[x[window_len-1:0:-1], x, x[-1:-window_len:-1]]
+    
+    # 生成Kaiser窗函数，用于加权平均
     w = np.kaiser(window_len, 2)
+    
+    # 使用卷积操作对扩展后的数组进行平滑处理
     y = np.convolve(w/w.sum(), s, mode='valid')
+    
+    # 去除由于卷积引入的额外边界点，返回中心部分的结果
     return y[5:len(y)-5]
 
 
 def shuffle_dataset(x, t):
-    """データセットのシャッフルを行う
+    """对数据集进行随机打乱操作
+
+    该函数通过生成一个随机排列索引，对训练数据和对应的教师数据进行同步打乱，
+    确保数据顺序的随机性，同时保持训练数据与教师数据的一一对应关系。
 
     Parameters
     ----------
-    x : 訓練データ
-    t : 教師データ
+    x : numpy.ndarray
+        训练数据，形状为 (样本数, 特征数) 或 (样本数, 高, 宽, 通道数)
+    t : numpy.ndarray
+        教师数据（标签），形状为 (样本数,)
 
     Returns
     -------
-    x, t : シャッフルを行った訓練データと教師データ
+    x : numpy.ndarray
+        打乱后的训练数据，形状与输入相同
+    t : numpy.ndarray
+        打乱后的教师数据，形状与输入相同
     """
+    # 生成一个长度为样本数的随机排列索引
     permutation = np.random.permutation(x.shape[0])
+    
+    # 根据索引对训练数据进行打乱，支持二维和四维数据
     x = x[permutation,:] if x.ndim == 2 else x[permutation,:,:,:]
+    
+    # 根据索引对教师数据进行打乱
     t = t[permutation]
 
     return x, t

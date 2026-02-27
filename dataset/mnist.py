@@ -131,7 +131,7 @@ def load_mnist(normalize=True, flatten=True, one_hot_label=False):
 
     # 加载保存的数据集文件
     with open(save_file, "rb") as f:
-        dataset = pickle.load(f)
+        dataset = pickle.load(f)  # dataset 是个 len=4 的 dict
 
     # 如果 normalize 为 True，则将图像数据的像素值归一化到 0.0~1.0
     if normalize:
