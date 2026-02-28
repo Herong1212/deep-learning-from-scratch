@@ -1,4 +1,4 @@
-深度学习入门：自制作原理与 Python 实现 (Deep Learning from Scratch)
+深度学习入门：基于Python的理论与实现 (Deep Learning from Scratch)
 ==========================
 
 
@@ -44,7 +44,7 @@ $ python train_nueralnet.py
 
 ## 在云端服务运行
 
-您可以直接点击下表中的按钮，在 AWS 提供的免费计算环境 [Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/) 上运行本书的代码（注：需事先通过 邮箱地址[进行注册](https://studiolab.sagemaker.aws/requestAccount)）。
+您可以直接点击下表中的按钮，在 AWS 提供的免费计算环境 [Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/) 上运行本书的代码（注：需事先通过邮箱地址[进行注册](https://studiolab.sagemaker.aws/requestAccount)）。
 关于 SageMaker Studio Lab 的具体使用方法，请[参阅](https://github.com/aws-sagemaker-jp/awesome-studio-lab-jp/blob/main/README_usage.md)此处说明。您也可以在 [Amazon SageMaker Studio Lab Community](https://github.com/aws-studiolab-jp/awesome-studio-lab-jp) 获取最新资讯。
 
 |文件夹名称 |Amazon SageMaker Studio Lab
@@ -62,7 +62,7 @@ $ python train_nueralnet.py
 
 ## 开源协议
 
-本仓库中的源代码采用[MIT 许可证](http://www.opensource.org/licenses/MIT)です。
+本仓库中的源代码采用[MIT 许可证](http://www.opensource.org/licenses/MIT)。
 无论是商业还是非商业用途，均可自由使用。
 
 ## 勘误表
