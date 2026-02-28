@@ -1,39 +1,38 @@
-ゼロから作る Deep Learning
+深度学习入门：自制作原理与 Python 实现 (Deep Learning from Scratch)
 ==========================
 
 
 [<img src="https://raw.githubusercontent.com/oreilly-japan/deep-learning-from-scratch/images/deep-learning-from-scratch.png" width="200px">](https://www.oreilly.co.jp/books/9784873117584/)
 
-書籍『[ゼロから作る Deep Learning](http://www.oreilly.co.jp/books/9784873117584/)』(オライリー・ジャパン発行)のサポートサイトです。本書籍で使用するソースコードがまとめられています。
+本书是《Deep Learning from Scratch》（O'Reilly Japan 出版，中文译名通常为《深度学习入门：基于 Python 的理论与实现》）的配套网站。本仓库包含了书中所使用的全部源代码。
 
 
+## 目录结构
 
-## ファイル構成
-
-|フォルダ名 |説明                         |
+|文件夹名    |说明                         |
 |:--        |:--                          |
-|ch01       |1章で使用するソースコード    |
-|ch02       |2章で使用するソースコード    |
+|ch01       |第 1 章使用的源代码            |
+|ch02       |第 2 章使用的源代码            |
 |...        |...                          |
-|ch08       |8章で使用するソースコード    |
-|common     |共通で使用するソースコード   |
-|dataset    |データセット用のソースコード |
+|ch08       |第 8 章使用的源代码            |
+|common     |各章节共用的函数及类           |
+|dataset    |数据集相关的处理代码           |
 
 
-ソースコードの解説は本書籍をご覧ください。
+注意： 关于源代码的详细讲解，请参阅原书内容。
 
-## Pythonと外部ライブラリ
-ソースコードを実行するには、下記のソフトウェアが必要です。
+## Python 与依赖库
+运行本项目代码需要安装以下软件及库：
 
 * Python 3.x
 * NumPy
 * Matplotlib
 
-※Pythonのバージョンは、3系を利用します。
+※ 请务必使用 Python 3 系列版本。
 
-## 実行方法
+## 运行方法
 
-各章のフォルダへ移動して、Pythonコマンドを実行します。
+进入各章节对应的文件夹，运行相应的 Python 命令。
 
 ```
 $ cd ch01
@@ -43,11 +42,12 @@ $ cd ../ch05
 $ python train_nueralnet.py
 ```
 
-## クラウドサービスでの実行
+## 在云端服务运行
 
-本書のコードは次の表にあるボタンをクリックすることで、AWSの無料の計算環境である[Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/)上に実行できます(事前に[メールアドレスによる登録](https://studiolab.sagemaker.aws/requestAccount)が必要です)。SageMaker Studio Labの使い方は[こちら](https://github.com/aws-sagemaker-jp/awesome-studio-lab-jp/blob/main/README_usage.md)をご覧ください。[Amazon SageMaker Studio Lab Community](https://github.com/aws-studiolab-jp/awesome-studio-lab-jp)で最新情報が取得できます。
+您可以直接点击下表中的按钮，在 AWS 提供的免费计算环境 [Amazon SageMaker Studio Lab](https://studiolab.sagemaker.aws/) 上运行本书的代码（注：需事先通过 邮箱地址[进行注册](https://studiolab.sagemaker.aws/requestAccount)）。
+关于 SageMaker Studio Lab 的具体使用方法，请[参阅](https://github.com/aws-sagemaker-jp/awesome-studio-lab-jp/blob/main/README_usage.md)此处说明。您也可以在 [Amazon SageMaker Studio Lab Community](https://github.com/aws-studiolab-jp/awesome-studio-lab-jp) 获取最新资讯。
 
-|フォルダ名 |Amazon SageMaker Studio Lab
+|文件夹名称 |Amazon SageMaker Studio Lab
 |:--        |:--                          |
 |ch01       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch/blob/master/notebooks/ch01.ipynb)|
 |ch02       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch/blob/master/notebooks/ch02.ipynb)|
@@ -60,16 +60,16 @@ $ python train_nueralnet.py
 |common       |[![Open In SageMaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/oreilly-japan/deep-learning-from-scratch/blob/master/notebooks/common.ipynb)|
 
 
-## ライセンス
+## 开源协议
 
-本リポジトリのソースコードは[MITライセンス](http://www.opensource.org/licenses/MIT)です。
-商用・非商用問わず、自由にご利用ください。
+本仓库中的源代码采用[MIT 许可证](http://www.opensource.org/licenses/MIT)です。
+无论是商业还是非商业用途，均可自由使用。
 
-## 正誤表
+## 勘误表
 
-本書の正誤情報は以下のページで公開しています。
+本书的勘误信息发布在以下页面：
 
 https://github.com/oreilly-japan/deep-learning-from-scratch/wiki/errata
 
-本ページに掲載されていない誤植など間違いを見つけた方は、[japan@oreilly.co.jp](<mailto:japan@oreilly.co.jp>)までお知らせください。
+如果您发现了页面中未列出的排版错误或内容疏漏，请通过邮件告知：[japan@oreilly.co.jp](<mailto:japan@oreilly.co.jp>)。
 
